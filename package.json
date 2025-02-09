@@ -67,14 +67,17 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "collectCoverageFrom": [
-      "**/*.(t|j)s"
+      "**/*.(controller|service).(t|j)s"
     ],
     "coverageDirectory": "../coverage/unit",
     "testEnvironment": "node",
     "coverageReporters": [
       "cobertura",
       "text",
-      "html",
+      "html"
+    ],
+    "reporters": [
+      "default",
       "jest-github-actions-reporter"
     ],
     "coverageThreshold": {

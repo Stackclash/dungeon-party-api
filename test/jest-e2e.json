@@ -6,6 +6,9 @@
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
   },
+  "collectCoverageFrom": [
+      "src/**/*.(controller|service).(t|j)s"
+  ],
   "coverageReporters": ["cobertura", "text", "html"],
   "coverageDirectory": "coverage/e2e"
 }
