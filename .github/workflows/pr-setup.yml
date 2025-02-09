@@ -1,0 +1,21 @@
+name: Pull Request Setup
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - reopened
+
+permissions:
+  pull-requests: write
+
+jobs:
+  pr-checks-and-setup:
+    name: PR Checks and Setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR Conventional Commit Validation
+        uses:  ytanikin/PRConventionalCommits@1.2.0
+        with:
+          task_types: '["feat","fix","docs","test","ci","refactor","chore"]'
+          custom_labels: '{"feat": "feature", "fix": "fix", "docs": "documentation", "test": "test", "ci": "CI/CD", "refactor": "refactor", "wip": "WIP"}'
