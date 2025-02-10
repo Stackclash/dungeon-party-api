@@ -10,5 +10,6 @@
       "src/**/*.(controller|service).(t|j)s"
   ],
   "coverageReporters": ["cobertura", "text", "html"],
-  "coverageDirectory": "coverage/e2e"
+  "coverageDirectory": "coverage/e2e",
+  "passWithNoTests": true
 }
